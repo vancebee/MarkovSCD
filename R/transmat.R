@@ -1,6 +1,6 @@
 transmat = function(tseries,statebounds,lag){##Function to find transition prob matrix
 
-  ###############Check formatting#################################
+  ###########################Check formatting######################
   if(!is.numeric(tseries)) stop("Time-series is not a numeric vector")
 
   if(!is.numeric(statebounds)) stop("statebounds is not a numeric vector")
@@ -41,7 +41,7 @@ transmat = function(tseries,statebounds,lag){##Function to find transition prob 
 
   ##############Return list of matrices##########################
   rtn = list(tm.prob,tm.raw)
-  names(rtn) = c("tm.prob", "tm.raw")
+  names(rtn) = c("prob", "raw")
 
   return(rtn)
 }
